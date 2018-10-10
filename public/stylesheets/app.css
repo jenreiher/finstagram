@@ -5,6 +5,7 @@ header {
 
 body {
   background-color: whitesmoke;
+  font-family: 'Bungee Inline', cursive;
 }
 
 main {
@@ -18,4 +19,10 @@ main {
 
 .finstagram-post .user-info img {
   border-radius: 50%;
+}
+
+h1, 
+h2,
+.comment_username {
+    font-family: 'Bungee Shade', cursive;
 }
