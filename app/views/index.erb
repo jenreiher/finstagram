@@ -1,0 +1,23 @@
+<% @posts.each do |post_data| %>
+  <article class="finstagram-post">
+    <div class="user-info">
+      <img src="<%= post_data[:avatar_url] %>" alt="sharky_j">
+      <h2><%= post_data[:username] %></h2>
+      <h3><%= post_data[:humanized_time_ago] %></h3>
+    </div>
+    <a class="photo" href="#">
+      <img src="<%= post_data[:photo_url] %>" alt="finstagram post from <%= post_data[:username] %>">
+    </a>
+    <div class="actions">
+      <%= post_data[:like_count] %>
+      <span class="comment-count"><%= post_data[:comment_count] %> comments</span>
+    </div>
+    <ul class="comments">
+      <li>
+        <p>
+          <%= post_data[:comments][0][:username] %>: <%= post_data[:comments][0][:text] %>
+        </p>
+      </li>
+    </ul>
+  </article>
+<% end %>
